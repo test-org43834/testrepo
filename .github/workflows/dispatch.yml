@@ -19,6 +19,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.inputs.bundle-tag }}
 
       - name: Resolve Upload URL for the release
         id: save_url
